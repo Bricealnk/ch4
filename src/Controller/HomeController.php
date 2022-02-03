@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="index")
+     * @Route("/", name="home")
      */
     public function index(ManagerRegistry $managerRegistry): Response
     {

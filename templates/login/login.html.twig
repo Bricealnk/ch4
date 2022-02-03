@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Se connecter{% endblock %}
+{% block body %}
+
+    <div class="row justify-content-center text-danger">
+        <form class="col-lg-6 col-md-8 col-sm-10 p-4 slideInUp" action="{{ path('login') }}" method="post">
+            <div class="mt-2 py-1 fw-bold text-success">
+                <label for="username">Email</label>
+                <input class="form-control" type="text" id="username" name="_username" placeholder="Email" value="{{ last_username }}"/>
+            </div>
+            <div class="mt-2 py-1 fw-bold text-success">
+                <label for="password">Mot de passe</label>
+                <input class="form-control" type="password" id="password" placeholder="Mot de passe" name="_password"/>
+            </div>
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}">
+            <div class="d-flex justify-content-center mt-4 mb-2 p-2">
+                <button type="submit" class="btn btn-success text-light rounded-pill fw-bold fs-5">Connexion</button>
+            </div>
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}">
+        </form>
+    </div>
+{% endblock %}

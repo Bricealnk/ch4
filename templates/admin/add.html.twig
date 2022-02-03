@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Ajout projet {% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 p-4 slideInUp">
+                <h1 class="col-10 col-sm-6 bg-green text-light text-center p-2 m-3 rounded-pill fw-bold fs-3"></h1>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center text-success fw-bold my-3 py-3">Ajouter un projet</h1>
+    <div class="justify-content-center col-10 mx-auto fw-bold py-3 text-success">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+    </div>
+    <div class="d-flex justify-content-center mt-4 mb-2 p-2">
+        <button type="submit" class="btn rounded-pill btn-lg fw-bold btn-success text-light">Valider</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

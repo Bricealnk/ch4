@@ -11,17 +11,32 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="{{ path('home') }}">Home <span class="sr-only">(current)</span></a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Projects</a></li>
                 <li><a href="">Skills</a></li>
-                <li><a href="">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+{% if app.user %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item">
+            <a class="fw-bold" href="{{ path('admin_home') }}">Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="fw-bold" href="">Se déconnecter</a>
+        </li>
+    {% endif %}
+{% else %}
+    <li class="nav-item">
+        <a class="fw-bold" href="{{ path('login') }}">Se connecter</a>
+    </li>
+{% endif %}
+
 
 <a class="anchor" id="home"></a>
 <div id="splash" class="container-fluid">
