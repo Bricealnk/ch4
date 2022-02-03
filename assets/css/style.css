@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script|Ubuntu|Roboto:400,700);
 
-/*html, body{
-  height: 100%;
-}*/
-
 body{
     font-family: "Ubuntu", sans-serif;
 }
@@ -26,7 +22,6 @@ a.anchor {
 }
 
 #splash{
-    background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/home.jpg);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -53,7 +48,6 @@ a.anchor {
 }
 
 #portfolio{
-    background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/portfolio.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -137,13 +131,10 @@ a.anchor {
 
 #about img{
     padding: 10px;
-    /*max-width: 180px;*/
 }
 
 #white-bg{
-    /*background-color: rgba(0,0,0, 0.5);
-    border-radius: 20px;
-    margin-right: 10px;*/
+
     float: left;
     display: inline-block;
     vertical-align: middle;
