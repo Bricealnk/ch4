@@ -25,7 +25,7 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity=Project::class, mappedBy="category")
+     * @ORM\OneToMany(targetEntity=project::class, mappedBy="category")
      */
     private $projects;
 

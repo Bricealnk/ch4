@@ -1,11 +1,183 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} - Accueil{% endblock %}
-{% block javascripts %}
-    {{ parent() }}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
+{% block title %}Mon Portfolio{% endblock %}
 
 {% block body %}
+    <a class="anchor" id="portfolio-link"></a>
+    <div id="portfolio" class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Portfolio</h1>
+                <hr />
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            {% for project in projects %}
+                            <div class="thumbnail">
+                                <a href="{{ project.url }}" target="_blank">
+                                    <div class="thumbnail-hover text-center">
+                                        <i class="fa fa-eye fa-4x"></i>
+                                    </div>
+                                    <img class="img-responsive" src="images/developpeur-web-multimedia.jpg" alt="">
+                                </a>
+                                <div class="caption">
+                                    <h3>{{ project.name }}</h3>
+                                    <p>{{ project.description}} </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-4">
+                            {% endfor %}
+                            <div class="thumbnail">
+
+                                    <div class="thumbnail-hover text-center">
+                                        <i class="fa fa-eye fa-4x"></i>
+                                    </div>
+                                    <img src="images/logo-site-en-construction.bmp">
+                                </a>
+                                <div class="caption">
+                                    <h3></h3>
+                                    <p>Site en construction !!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="thumbnail">
+                                <a href="#" target="_blank">
+                                    <div class="thumbnail-hover text-center">
+                                        <i class="fa fa-eye fa-4x"></i>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1429728479567-9c51fb49813e?crop=entropy&dpr=2&fit=crop&fm=jpg&h=300&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400">
+                                </a>
+                                <div class="caption">
+                                    <h3>Placeholder</h3>
+                                    <p>Placeholder project desciption goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="thumbnail">
+                                <a href="#" target="_blank">
+                                    <div class="thumbnail-hover text-center">
+                                        <i class="fa fa-eye fa-4x"></i>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1422480723682-a694a43341fb?crop=entropy&dpr=2&fit=crop&fm=jpg&h=275&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400">
+                                </a>
+                                <div class="caption">
+                                    <h3>Placeholder</h3>
+                                    <p>Placeholder project desciption goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="thumbnail">
+                                <a href="#" target="_blank">
+                                    <div class="thumbnail-hover text-center">
+                                        <i class="fa fa-eye fa-4x"></i>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1451968362585-6f6b322071c7?crop=entropy&dpr=2&fit=crop&fm=jpg&h=225&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400">
+                                </a>
+                                <div class="caption">
+                                    <h3>Placeholder</h3>
+                                    <p>Placeholder project desciption goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="anchor" id="about-link"></a>
+    <div id="about" class="container-fluid text-center">
+        <h1>About</h1>
+        <hr />
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-lg-3">
+                    <a href = "https://github.com/bricealnk">
+                        <img class="img-responsive img-circle center-block" src="https://avatars.githubusercontent.com/u/90565756?v=4" alt="Bricealnk" />
+                    </a>
+                </div>
+                <div id="white-bg" class="col-lg-8">
+                    <p>
+                        Full Stack Developper, studied at Wild Code School (september 2021 to february 2022)
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="anchor" id="contact-link"></a>
+    <div id="contact" class="container-fluid text-center">
+        <h1>Contact</h1>
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>Social</h2>
+                    <a href="https://twitter.com/symfony">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/brice-a%C3%AFlounakin-3958151ab/">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+                    </a>
+                    <a href="https://github.com/bricealnk">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+              </span>
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2>Communication</h2>
+                    <a href="officielbrice@gmail.com">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $(".navbar-nav li").click(function(){
+                        $(".navbar-nav li").removeClass("active");
+                        $(this).addClass("active");
+                    }
+                );
+
+                $('.navbar-nav a').click(function(event){
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                    }, 500);
+                });
+
+            }
+        );
+    </script>
+
 
 {% endblock %}
