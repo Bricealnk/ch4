@@ -21,6 +21,13 @@ class Skill
      * @ORM\Column(type="string", length=255)
      */
     private $Name;
+    /**
+     * @var string
+     */
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
 
     public function getId(): ?int
     {
@@ -35,6 +42,17 @@ class Skill
     public function setName(string $Name): self
     {
         $this->Name = $Name;
+
+        return $this;
+    }
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

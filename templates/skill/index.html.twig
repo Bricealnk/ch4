@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Skill{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+
+    <div class="col-lg-4">
+        {% for skill in skills %}
+        <div class="thumbnail bg-dark">
+                <div class="thumbnail-hover text-center">
+                    <i class="fa fa-eye fa-4x"></i>
+                </div>
+                <img class="img-responsive" src="{{ skill.image }}" alt="">
+            </a>
+            <div class="caption text-light">
+                <h3>{{ skill.name }}</h3>
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
