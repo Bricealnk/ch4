@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
  */
+
 class Project
 {
     /**
@@ -104,7 +105,6 @@ class Project
 
         return $this;
     }
-
     public function getCreatedAt(): ?\DateTimeImmutable
     {
         return $this->created_at;
@@ -140,4 +140,5 @@ class Project
 
         return $this;
     }
+
 }

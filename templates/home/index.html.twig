@@ -14,14 +14,14 @@
                     <div class="row">
                         <div class="col-lg-4">
                             {% for project in projects %}
-                            <div class="thumbnail">
+                            <div class="thumbnail bg-dark">
                                 <a href="{{ project.url }}" target="_blank">
                                     <div class="thumbnail-hover text-center">
                                         <i class="fa fa-eye fa-4x"></i>
                                     </div>
-                                    <img class="img-responsive" src="images/developpeur-web-multimedia.jpg" alt="">
+                                    <img class="img-responsive" src="{{ project.image }}" alt="image">
                                 </a>
-                                <div class="caption">
+                                <div class="caption text-light">
                                     <h3>{{ project.name }}</h3>
                                     <p>{{ project.description}} </p>
                                 </div>
@@ -32,14 +32,14 @@
 
                         <div class="col-lg-4">
                             {% endfor %}
-                            <div class="thumbnail">
+                            <div class="thumbnail bg-dark">
 
                                     <div class="thumbnail-hover text-center">
                                         <i class="fa fa-eye fa-4x"></i>
                                     </div>
                                     <img src="images/logo-site-en-construction.bmp">
                                 </a>
-                                <div class="caption">
+                                <div class="caption text-light">
                                     <h3></h3>
                                     <p>Site en construction !!</p>
                                 </div>

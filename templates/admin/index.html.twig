@@ -3,6 +3,25 @@
 {% block title %}Admin{% endblock %}
 
 {% block body %}
-    <a class="btn-home text-black btn rounded-pill border-0 p-3 fs-5 mt-3" href="{{ path('admin_add') }}">Ajouter</a>
+    <div class="row">
 
+    <div class="col-lg-4">
+        {% for project in projects %}
+        <div class="thumbnail bg-dark">
+            <a class="btn-home text-black btn rounded-pill border-0 p-3 fs-5 mt-3" href="{{ path('admin_add') }}">Ajouter</a>
+            <a href="{{ project.url }}" target="_blank">
+                <div class="thumbnail-hover text-center">
+                    <i class="fa fa-eye fa-4x"></i>
+                </div>
+                <img class="img-responsive" src="images/developpeur-web-multimedia.jpg" alt="">
+            </a>
+            <div class="caption text-light">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description}} </p>
+            </div>
+            <a class="btn-home text-black btn rounded-pill border-0 p-3 fs-5 mt-3" href="{{ path('admin_delete') }}">Supprimer</a>
+
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}

@@ -13,11 +13,11 @@
                 <label for="password">Mot de passe</label>
                 <input class="form-control" type="password" id="password" placeholder="Mot de passe" name="_password"/>
             </div>
-            <input type="hidden" name="_csrf_token"
-                   value="{{ csrf_token('authenticate') }}">
+
             <div class="d-flex justify-content-center mt-4 mb-2 p-2">
                 <button type="submit" class="btn btn-success text-light rounded-pill fw-bold fs-5">Connexion</button>
             </div>
+
             <input type="hidden" name="_csrf_token"
                    value="{{ csrf_token('authenticate') }}">
         </form>
